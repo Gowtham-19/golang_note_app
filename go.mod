@@ -46,4 +46,7 @@ require (
 	honnef.co/go/tools v0.3.2 // indirect
 )
 
-require github.com/bitly/go-simplejson v0.5.0 // indirect
+require (
+	github.com/bitly/go-simplejson v0.5.0 // indirect
+	github.com/gin-contrib/cors v1.3.1
+)

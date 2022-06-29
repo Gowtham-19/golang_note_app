@@ -227,6 +227,22 @@ func Filter_Notes(c *gin.Context) {
 				notes = append(notes, singleNote)
 			}
 		}
+	} else if filter_type == "get_all_notes" {
+		data, err := configs.Collection.Find(context.Background(), bson.M{})
+		if err != nil {
+			c.JSON(http.StatusInternalServerError,
+				responses.UserResponse{Status: http.StatusInternalServerError, Message: "error", Data: map[string]interface{}{"data": err}},
+			)
+		} else {
+			defer data.Close(context.Background())
+			for data.Next(context.Background()) {
+				var singleNote model.Notes
+				if err = data.Decode(&singleNote); err != nil {
+					c.JSON(http.StatusInternalServerError, responses.UserResponse{Status: http.StatusInternalServerError, Message: "error", Data: map[string]interface{}{"data": err.Error()}})
+				}
+				notes = append(notes, singleNote)
+			}
+		}
 	}
 	c.JSON(200, gin.H{
 		"status": 200,
