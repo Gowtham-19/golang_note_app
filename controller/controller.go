@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Gowtham-19/note_server/configs"
-	"github.com/Gowtham-19/note_server/model"
-	"github.com/Gowtham-19/note_server/responses"
+	"github.com/Gowtham-19/note_golang_server/configs"
+	"github.com/Gowtham-19/note_golang_server/model"
+	"github.com/Gowtham-19/note_golang_server/responses"
 	"github.com/bitly/go-simplejson"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson"

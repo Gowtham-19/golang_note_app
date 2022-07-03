@@ -1,4 +1,4 @@
-module github.com/Gowtham-19/note_server
+module github.com/Gowtham-19/note_golang_server
 
 go 1.18
 

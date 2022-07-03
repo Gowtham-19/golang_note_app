@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/Gowtham-19/note_server/controller"
+	"github.com/Gowtham-19/note_golang_server/controller"
 	"github.com/gin-gonic/gin"
 )
 

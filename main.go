@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Gowtham-19/note_server/configs"
-	"github.com/Gowtham-19/note_server/routes"
+	"github.com/Gowtham-19/note_golang_server/configs"
+	"github.com/Gowtham-19/note_golang_server/routes"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
