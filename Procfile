@@ -1,1 +1,1 @@
-web:bin\golang-note-app.exe
+web:go run main.go
