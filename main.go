@@ -22,6 +22,6 @@ func main() {
 	routes.UserRouter(router)
 	port := os.Getenv("PORT")
 	//starting server
-	sever_host := "localhost:" + port
+	sever_host := "0.0.0.0:" + port
 	router.Run(sever_host)
 }
