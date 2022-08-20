@@ -244,17 +244,8 @@ func Filter_Notes(c *gin.Context) {
 			}
 		}
 	}
-	if notes == nil {
-		type msg_data struct{}
-		var data msg_data
-		c.JSON(200, gin.H{
-			"status": 200,
-			"data":   data,
-		})
-	} else {
-		c.JSON(200, gin.H{
-			"status": 200,
-			"data":   notes,
-		})
-	}
+	c.JSON(200, gin.H{
+		"status": 200,
+		"data":   notes,
+	})
 }
